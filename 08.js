@@ -1,7 +1,7 @@
 const alunos = [], fm = []
-let total, media = 0
+let media = 0
 
-total = prompt("Quantidade de alunos avaliados;")
+const total = prompt("Quantidade de alunos avaliados;")
 for(let i = 0; i < total; i++){
     const aluno = {}
     aluno.nome = prompt("Nome do(a) aluno(a) " + (i + 1))

@@ -25,7 +25,7 @@ while (true) {
         break;
     } else if (açao === "DELETAR") {
         listar();
-        let posiçao = parseInt(
+        const posiçao = parseInt(
             prompt("Digite a posição do contato a ser deletado;")!,
         );
         if (posiçao > contato.length || posiçao <= 0) {
