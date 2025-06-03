@@ -1,4 +1,4 @@
-const alunos = [], fm = []
+const alunos = [], foraMedia = []
 let media = 0
 
 const total = prompt("Quantidade de alunos avaliados;")
@@ -14,7 +14,7 @@ for(let i = 0; i < alunos.length; i++){
 media /= total
 for (let i = 0; i < alunos.length; i++) {
     if( alunos[i].nota < media){
-        fm.push(alunos[i].nome)
+        foraMedia.push(alunos[i].nome)
     }
 }
-console.log("Alunos fora da média são:", fm)
+console.log("Alunos fora da média são:", foraMedia)

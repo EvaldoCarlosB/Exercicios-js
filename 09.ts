@@ -4,11 +4,11 @@ type Contato = {
     numero: string;
 };
 function listar() {
-    for (let i = 0; i < contato.length; i++) {
-        console.log(i + 1, ": ", contato[i].nome, " - ", contato[i].numero);
+    for (let i = 0; i < contatos.length; i++) {
+        console.log(i + 1, ": ", contatos[i].nome, " - ", contatos[i].numero);
     }
 }
-const contato: Contato[] = [];
+const contatos: Contato[] = [];
 console.log(
     "Bem Vindo a Lista de Contatos, digite CONTATOS para ver seus contatos atuais, ADICIONAR para adicionar um novo ou SAIR para fechar",
 );
@@ -17,10 +17,10 @@ while (true) {
     if (açao === "CONTATOS") {
         listar();
     } else if (açao === "ADICIONAR") {
-        const contatos: Contato = { nome: "", numero: "" };
-        contatos.nome = prompt("Nome Completo;")!;
-        contatos.numero = prompt("Número;")!;
-        contato.push(contatos);
+        const contato: Contato = { nome: "", numero: "" };
+        contato.nome = prompt("Nome Completo;")!;
+        contato.numero = prompt("Número;")!;
+        contatos.push(contato);
     } else if (açao === "SAIR") {
         break;
     } else if (açao === "DELETAR") {
@@ -28,10 +28,10 @@ while (true) {
         const posiçao = parseInt(
             prompt("Digite a posição do contato a ser deletado;")!,
         );
-        if (posiçao > contato.length || posiçao <= 0) {
+        if (posiçao > contatos.length || posiçao <= 0) {
             console.log("Contato Inválido");
         } else {
-            contato.splice(posiçao - 1, 1);
+            contatos.splice(posiçao - 1, 1);
         }
     } else {
         console.log("Comando não reconhecido.");
